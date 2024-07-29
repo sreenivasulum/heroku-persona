@@ -10,4 +10,4 @@ User name
 
 Tweets
 
-Run Command: 
+Run Command: python app.py
