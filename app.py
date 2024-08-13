@@ -47,6 +47,7 @@ def get_user_tweets(user_id):
     response = requests.get(url, headers=headers, params=params)
     response.raise_for_status()
     return [{
+        'tweet_id': tweet['id'],
         'created_at': tweet['created_at'],
         'text': tweet['text']
     } for tweet in response.json()['data']]
