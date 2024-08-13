@@ -11,6 +11,10 @@ CORS(app)  # Enable CORS for all origins by default
 #run_with_ngrok(app)
 bearer_token = "AAAAAAAAAAAAAAAAAAAAAIbMtwEAAAAAqw5oqOo3o07SCqa1VZPPkEH5jf8%3D0OYxcrWdjl6KlCB9bNstF5j2Au3U4LWx85lbG83wRF3vn9rOdc"  # Replace with your actual bearer token
 
+@app.route('/')
+def hello_twitter():
+    return "Hello Twitter"
+
 @app.route('/api/twitter/<username>')
 def get_tweets(username):
     try:
